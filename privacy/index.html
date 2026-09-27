@@ -19,16 +19,15 @@
 
     <main class="site-main legal">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: July 7, 2026</p>
+      <p class="updated">Last updated: September 27, 2026</p>
 
       <h2>Local-first privacy</h2>
-      <p>Workplace Evidence Log is designed as a private, local-first record tool. You can use the core app without creating an account.</p>
-      <p>Your saved workplace records, descriptions, people, witnesses, locations, attachments, notes, data export packages, and generated PDF reports stay on your device unless you choose to export or share them.</p>
+      <p>Your records and attachments are stored on this device. Exporting, sharing, or explicitly requesting a PCC analysis sends only the content selected for that action.</p>
 
       <h2>Information stored on your device</h2>
       <p>The app stores the information you choose to enter, including records, dates, descriptions, categories, people, witnesses, locations, notes, linked evidence metadata, and app settings.</p>
-      <p>Attachment files that you add are copied into the app's private local storage. ZIP data packages and PDF reports are generated locally from data already saved on your device.</p>
-      <p>Onboarding, disclaimer acceptance, app-lock preferences, premium entitlement state, and a local passcode verifier may be stored in device settings. The passcode itself is not stored. Face ID authentication is handled by iOS.</p>
+      <p>Attachment files that you add are copied into the app&#x27;s private local storage. ZIP data packages and PDF reports are generated locally from data already saved on your device.</p>
+      <p>Onboarding, disclaimer acceptance, app-lock preferences, retry cooldowns, and premium entitlement state may be stored in device settings. New passcode verifiers are stored in this device’s Keychain. Existing verifiers are migrated after a successful unlock. The passcode itself is not stored. Face ID authentication is handled by iOS.</p>
 
       <h2>Information not collected by us</h2>
       <p>The app does not collect your workplace records, attachments, contacts, location, photos, analytics, advertising identifiers, or diagnostics for developer-operated analytics, advertising, remote storage, or tracking.</p>
@@ -38,10 +37,18 @@
       <p>Premium purchases and subscription status are processed by Apple through StoreKit and the App Store. We do not receive your payment card details.</p>
       <p>The app may store a local premium-active flag so it can unlock paid features after App Store verification.</p>
 
-      <h2>On-device AI assistance</h2>
-      <p>The app may use on-device AI to help identify factual details already present in the incident description you entered.</p>
-      <p>This may include Apple-provided on-device system models when available and local models built into the app. These models run on your device.</p>
-      <p>The app does not use a remote AI service, backend server, or developer-operated server to process your records, descriptions, attachments, or AI suggestion results.</p>
+      <h2>On-device and optional private cloud AI</h2>
+      <p>The app may use on-device AI to help identify factual details already present in the record description you entered.</p>
+      <p>The bundled Qwen3.5 model analyzes notes entirely on your device. It does not download model files or send your notes to Qwen or Hugging Face.</p>
+      <p>On-device suggestions run locally. On iOS 27 and supported devices, you can also request an analysis with Apple Private Cloud Compute.</p>
+      <p>When you confirm a single-note PCC analysis, the current note is sent to Apple for processing. In guided capture, after you choose PCC and agree to continue, the current conversation, source excerpts, draft and review states are sent for each requested step. With Qwen, that processing stays on your device. Attachments and other records are not included. We do not operate an AI server. Model comparisons use fictional test notes. PCC requires network access and is subject to Apple account usage limits.</p>
+      <p>Direct Quick Table entry does not require a model. Saved tables retain complete editable field values, including long text, on this device. Full data exports include these values; PDF reports use the complete confirmed event description. Choosing guidance for an existing record provides that record&#x27;s current text to the selected model after consent; other records and attachments are not included. Direct table edits do not automatically rewrite an existing conversation.</p>
+      <p>PDF reports label times and wording that you marked as approximate in Quick Table. Returning to a saved record checks for a newer locally autosaved conversation before showing the continuation notice; this does not send data to a model.</p>
+      <p>Guided capture separates original fragments, model proposals and user-confirmed items. Only confirmed items are transferred to Quick Table. Health details are excluded from that transfer and reports unless you enable their inclusion. Full data exports of saved records include private guided-session data, including source fragments and health information. PDF reports do not include the private conversation transcript.</p>
+      <p>After you continue from the processing notice, conversation state is saved automatically on this device. Unsent text is stored separately and is not included in model requests until you submit it. Text edits are saved after a short pause in typing; leaving the conversation or moving away from the app triggers an immediate save attempt. Model replies, submitted messages and review changes also trigger saves. Storage failures are shown with a retry action. Reopening a conversation does not automatically start model inference.</p>
+      <p>Standalone conversations use iOS file protection and are excluded from device backups and the full data export. Applying confirmed items and saving a record stores the source/draft/review session and continuation metadata with that record; full data exports include this private data, including unsent text. Saving does not share it.</p>
+      <p>Storage management provides separate controls for deleting saved conversations and clearing disposable export copies. Automatic/manual temporary-file cleanup is restricted to app-generated PDF/ZIP export copies older than 24 hours; it does not remove conversations, records, evidence attachments or bundled Qwen resources. Copies saved outside the app are not affected.</p>
+      <p>Editing a source invalidates linked model items; deleting it removes its retained revisions and linked items in that draft. Direct edits in Quick Table are independent user copies; exported copies and separately saved drafts are not removed by deleting a source elsewhere. Delete those copies separately if needed. The guide offers bounded steps and a review break; continuing is your choice. It does not determine whether bullying occurred or provide diagnoses or legal conclusions.</p>
 
       <h2>Exporting and sharing</h2>
       <p>When you export or share a ZIP data package, PDF report, or attachment, you choose the destination. The selected destination, such as Files, Mail, Messages, cloud storage, or another app, handles the copy you share under its own privacy practices.</p>
@@ -53,7 +60,7 @@
       <p>This does not use GPS, precise location, or Location Services. You can change the selected country or region in the resource list, and the app may remember that preference on this device.</p>
 
       <h2>Deletion and control</h2>
-      <p>You can delete individual records, attachments, and all local evidence data in the app. Deleting all local evidence data removes saved records, people, witnesses, attachment records, and app-stored attachment files from this device.</p>
+      <p>You can delete individual records, attachments, and all local evidence data in the app. Deleting all local evidence data removes saved records, related-record groups, people, witnesses, attachment records, app-stored attachment files, and app-created export caches, and standalone guided drafts from this device.</p>
       <p>Deleting local evidence data does not delete files you already exported or shared outside the app. Removing the app from your device removes app-local data according to iOS behavior.</p>
 
       <h2>EU/EEA and UK privacy rights</h2>
